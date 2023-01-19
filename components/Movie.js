@@ -31,7 +31,7 @@ function Movie(props) {
     console.log("Movie information before opening the modal:", movie);
     setShowModalMovie(true);
     if (MovieReducer == null) {
-      fetch(`http://localhost:3000/movies/movieById/${movie.id}`)
+      fetch(`https://niflix-backend.vercel.app/movies/movieById/${movie.id}`)
         .then((res) => res.json())
         .then((data) => {
           let trailer = data.results.find(

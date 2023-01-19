@@ -4,7 +4,7 @@ import Banner from "./Banner";
 import Nav from "./Nav";
 
 function Browse() {
-  let BACKEND_ADDRESS = "http://localhost:3000";
+  let BACKEND_ADDRESS = "https://niflix-backend.vercel.app";
   return (
     <div>
       <main className={styles.main}>
