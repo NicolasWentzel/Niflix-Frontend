@@ -1,22 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Netflix+Sans&display=swap");
+
 .main {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #221f1f;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  padding: 4rem 0;
 }
 
 .title {
-  line-height: 1.15;
-  font-size: 4rem;
+  color: #e50914;
+  font-family: "Netflix Sans", sans-serif;
+  font-size: 200px;
+  display: flex;
+  justify-content: center;
+  position: relative;
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
+.title span {
+  display: inline-block;
+  margin: 0 2px;
 }
 
-.title a:hover, .title a:focus, .title a:active {
-  text-decoration: underline;
+@media screen and (max-width: 600px) {
+  .title {
+    font-size: 95px;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+  .title {
+    font-size: 200px;
+  }
+}
+
+@media screen and (min-width: 901px) and (max-width: 1200px) {
+  .title {
+    font-size: 250px;
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  .title {
+    font-size: 300px;
+  }
 }

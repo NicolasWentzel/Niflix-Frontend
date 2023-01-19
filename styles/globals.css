@@ -6,5 +6,41 @@ body {
 }
 
 * {
-  box-sizing: border-box;
+  box-sizing: content-box;
+}
+
+.modalStyle .ant-modal-content {
+  color: whitesmoke;
+  background-color: #221f1f;
+  height: 100%;
+}
+
+.my-modal .ant-modal-content {
+  height: 400px;
+}
+
+.modalStyle .ant-modal-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.ant-modal {
+  position: relative;
+  top: 5%;
+
+  /* margin: 0; */
+}
+
+* iframe {
+  height: 300px;
+}
+
+#widget4 {
+  height: 400px;
+}
+
+@media screen and (max-width: 600px) {
+  #widget4 {
+    height: 300px;
+  }
 }
