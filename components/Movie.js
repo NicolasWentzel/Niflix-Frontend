@@ -176,7 +176,11 @@ function Movie(props) {
         footer={null}
         destroyOnClose={true}
         className="modalStyle "
-        width={window.innerWidth > 600 ? "50%" : "100%"}
+        width={
+          typeof window !== "undefined" && window.innerWidth > 600
+            ? "50%"
+            : "100%"
+        }
       >
         <div className={styles.titreModal}>
           <h3 className={styles.name}>
