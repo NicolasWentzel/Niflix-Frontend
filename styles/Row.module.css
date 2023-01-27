@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Netflix+Sans&display=swap");
 
 .row {
-  /* display: flex;
-  flex-direction: column; */
+  display: flex;
+  flex-direction: column;
   margin-left: 2.5%;
   margin-top: 1%;
 }
@@ -25,4 +25,38 @@
 
 .moviesContainer::-webkit-scrollbar {
   display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .seeMoreButton {
+    display: none;
+  }
+}
+
+.seeMoreArrow {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  cursor: pointer;
+  color: whitesmoke;
+}
+
+.seeMoreButton {
+  border: none;
+  outline: none;
+  font-size: 2em;
+  color: whitesmoke;
+  background-color: transparent;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.seeMoreButton:hover {
+  opacity: 1;
+  transition: all 0.2s;
+}
+.rowTitle {
+  display: flex;
+  justify-content: space-between;
 }

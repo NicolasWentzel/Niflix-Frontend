@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   padding: 0;
   margin: 0;
@@ -7,6 +11,11 @@ body {
 
 * {
   box-sizing: content-box;
+}
+
+::-webkit-scrollbar {
+  display: none;
+  -webkit-appearance: none; /* Add this line */
 }
 
 .modalStyle .ant-modal-content {
@@ -42,5 +51,9 @@ body {
 @media screen and (max-width: 600px) {
   #widget4 {
     height: 300px;
+  }
+  body {
+    overflow-y: scroll; /* cache seulement la barre verticale */
+    overflow-x: hidden; /* cache seulement la barre horizontale */
   }
 }

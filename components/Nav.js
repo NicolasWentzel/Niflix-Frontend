@@ -45,26 +45,26 @@ function Nav() {
           onClick={() => toBrowse()}
         />
       </div>
-      {/* <div className={`${styles.block2} `}>
-        <span
+      <div className={`${styles.block2} `}>
+        {/* <span
           className={`${styles.liste} ${styles.cursor}`}
           onClick={() => toBrowse()}
         >
-          Accueil
-        </span>
-        <span
+          Home
+        </span> */}
+        {/* <span
           className={`${styles.liste} ${styles.cursor}`}
           onClick={() => toNotes()}
         >
-          Notes
-        </span>
-        <span
+          Rated
+        </span> */}
+        {/* <span
           className={`${styles.liste} ${styles.cursor}`}
           onClick={() => toFavoris()}
         >
-          Favoris
-        </span>
-      </div> */}
+          Spotted
+        </span> */}
+      </div>
       <div
         className={`${styles.block3} ${styles.cursor}`}
         // onClick={() => toProfile()}

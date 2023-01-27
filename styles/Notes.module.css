@@ -1,35 +1,53 @@
 .main {
-  width: 100vw;
-  min-height: 100vh;
-  margin: 0;
   background-color: #221f1f;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  height: 10vh;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Netflix+Sans&display=swap");
+.container {
+  height: 90vh;
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: center; */
+}
 
-.row {
-  /* display: flex;
-  flex-direction: column; */
-  margin-left: 2.5%;
-  margin-top: 1%;
+.good {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* align-content: flex-start; */
+  overflow-y: scroll;
+  height: 100%;
+}
+.bad {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+  height: 100%;
+  /* align-content: flex-start; */
+}
+
+.movies {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+  overflow: auto;
+  height: 100%;
+  width: 100%;
 }
 
 .title {
-  font-family: "Netflix Sans", sans-serif;
-  margin: 0%;
-  padding-left: 1%;
-  /* margin-bottom: 1%; */
   color: whitesmoke;
-}
-
-.moviesContainer {
-  display: flex;
-  overflow-y: hidden;
-  overflow-x: scroll;
-  /* overflow: hidden; */
-  padding: 1%;
-}
-
-.moviesContainer::-webkit-scrollbar {
-  display: none;
 }

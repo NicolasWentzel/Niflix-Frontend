@@ -7,6 +7,7 @@ import mustSee from "../reducers/mustSee";
 import personalNote from "../reducers/personalNote";
 import movie from "../reducers/movie";
 import { SWRConfig } from "swr/_internal";
+import "../public/styles.css";
 
 const store = configureStore({ reducer: { mustSee, personalNote, movie } });
 
@@ -17,7 +18,6 @@ function App({ Component, pageProps }) {
         <Provider store={store}>
           <Head>
             <title>Niflix</title>
-            <script src="https://www.youtube.com/iframe_api"></script>
           </Head>
           <Component {...pageProps} />
         </Provider>

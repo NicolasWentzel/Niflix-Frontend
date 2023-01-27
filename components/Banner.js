@@ -37,12 +37,12 @@ function Banner(props) {
     return str?.length > n ? str.substr(0, n - 1) + "..." : str;
   }
 
-  console.log("movie", movie);
+  console.log("Les infos du movie", movie);
 
   const handleClick = (movie) => {
     console.log("Movie information before opening the modal:", movie);
     setShowModalMovie(true);
-    if (MovieReducer == null) {
+    if (MovieReducer == null && movie && movie.id) {
       fetch(`https://niflix-backend.vercel.app/movies/movieById/${movie.id}`)
         .then((res) => res.json())
         .then((data) => {
@@ -174,7 +174,10 @@ function Banner(props) {
       className={styles.banner}
       style={{
         backgroundSize: "cover",
-        backgroundImage: `url(https://image.tmdb.org/t/p/w500${movie?.backdrop_path})`,
+        backgroundImage: movie?.backdrop_path
+          ? `url(https://image.tmdb.org/t/p/w500${movie?.backdrop_path})`
+          : "none",
+
         backgroundPosition: "center center",
       }}
     >
@@ -188,13 +191,13 @@ function Banner(props) {
             className={styles.bannerButton}
             onClick={() => handleClick(movie)}
           >
-            Lecture
+            Play
           </button>
           <button
             className={styles.bannerButton}
             onClick={() => handleClick(movie)}
           >
-            Plus d'infos
+            More Info
           </button>
         </div>
         <h1 className={styles.bannerDescription}>
@@ -206,14 +209,23 @@ function Banner(props) {
         id="widget4"
         onCancel={() => handleCloseModal()}
         open={showModalMovie}
+        destroyOnClose={true}
         footer={null}
         className="modalStyle "
         // width={window.innerWidth > 600 ? "50%" : "100%"}
       >
         <div className={styles.titreModal}>
           <h3 className={styles.name}>
-            {movie.title ? movie.title : movie.name}
-            <span>({movie.vote_average})</span>
+            {movie && movie.title
+              ? movie.title
+              : movie && movie.name
+              ? movie.name
+              : "Titre inconnu"}
+            <span>
+              {movie && movie.vote_average
+                ? `(${movie.vote_average})`
+                : "(Inconnu)"}
+            </span>
           </h3>
           <p className={styles.mustSee}>{iconMustSee}</p>
         </div>
@@ -255,7 +267,11 @@ function Banner(props) {
         </div>
 
         <div className={styles.texte}>
-          <p className={styles.description}>{movie.overview}</p>
+          <p className={styles.description}>
+            {movie && movie.overview
+              ? movie.overview
+              : "Aucune description disponible."}
+          </p>
           <div className={styles.emoji}>
             <p className={styles.good}>{iconGood}</p>
             <p className={styles.bad}>{iconBad}</p>

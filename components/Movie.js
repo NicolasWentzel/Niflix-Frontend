@@ -16,12 +16,12 @@ import Youtube from "react-youtube";
 import { setCurrentVideo, clearCurrentVideo } from "../reducers/movie";
 
 function Movie(props) {
+  console.log("Les props", props);
   const dispatch = useDispatch();
   const [showModalMovie, setShowModalMovie] = useState(false);
   const [good, setGood] = useState(false);
   const [bad, setBad] = useState(false);
   const [mustSee, setMustSee] = useState(false);
-  const [idTrailer, setIdTrailer] = useState("");
   const MovieReducer = useSelector((state) => state.movie.currentVideoId);
   const youtubeRef = useRef(null);
 
@@ -68,9 +68,9 @@ function Movie(props) {
     }
   };
 
-  let styleIsGood = { cursor: "pointer", fontSize: "400%" };
+  let styleIsGood = { cursor: "pointer", fontSize: "200%" };
   if (good == true) {
-    styleIsGood = { cursor: "pointer", color: "green", fontSize: "400%" };
+    styleIsGood = { cursor: "pointer", color: "green", fontSize: "200%" };
   }
   let iconGood = (
     <FontAwesomeIcon
@@ -102,9 +102,9 @@ function Movie(props) {
       setGood(false);
     }
   };
-  let styleIsBad = { cursor: "pointer", fontSize: "400%" };
+  let styleIsBad = { cursor: "pointer", fontSize: "200%" };
   if (bad == true) {
-    styleIsBad = { cursor: "pointer", color: "#e74c3c", fontSize: "400%" };
+    styleIsBad = { cursor: "pointer", color: "#e74c3c", fontSize: "200%" };
   }
   let iconBad = (
     <FontAwesomeIcon
@@ -162,8 +162,11 @@ function Movie(props) {
     <>
       <img
         className={styles.affiche}
-        src={`https://image.tmdb.org/t/p/w500/${props.poster_path}`}
-        // src={`https://image.tmdb.org/t/p/w500/${props.backdrop_path}`}
+        src={
+          props.poster_path
+            ? `https://image.tmdb.org/t/p/w500/${props.poster_path}`
+            : `https://image.tmdb.org/t/p/w500/${props.backdrop_path}`
+        }
         alt="Poster"
         onClick={() => handleClick(props)}
         key={props.id}
@@ -189,28 +192,6 @@ function Movie(props) {
           </h3>
           <p className={styles.mustSee}>{iconMustSee}</p>
         </div>
-
-        {/* {idTrailer ? (
-          <div id="player" style={{ height: "100%", width: "100%" }}>
-            <Youtube
-              ref={youtubeRef}
-              videoId={idTrailer}
-              opts={opts}
-              onReady={() => {
-                dispatch(setCurrentVideo(idTrailer));
-              }}
-            />
-          </div>
-        ) : (
-          <img
-            className={styles.afficheModal}
-            src={`https://image.tmdb.org/t/p/w500/${props.poster_path}`}
-            alt="Poster"
-            onClick={() => setShowModalMovie(true)}
-            key={props.id}
-          />
-        )} */}
-
         <div id="player" style={{ height: "100%", width: "100%" }}>
           <Youtube
             ref={youtubeRef}
@@ -234,8 +215,6 @@ function Movie(props) {
           </div>
         </div>
       </Modal>
-
-      <script src="https://www.youtube.com/iframe_api"></script>
     </>
   );
 }

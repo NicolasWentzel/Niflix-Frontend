@@ -6,7 +6,7 @@ function NotesPage() {
   return (
     <>
       <Head>
-        <title>Notes / Niflix</title>
+        <title>Rated / Niflix</title>
       </Head>
       <Notes />
     </>
