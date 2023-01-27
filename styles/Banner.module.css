@@ -24,6 +24,13 @@
   font-size: 0.8rem;
   max-width: 360px;
   height: 30%;
+  padding-top: 1%;
+}
+
+@media screen and (max-width: 600px) {
+  .bannerDescription {
+    padding-top: 2%;
+  }
 }
 
 .bannerButton {
@@ -39,6 +46,7 @@
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   background-color: rgba(56, 56, 56, 0.843);
+  margin-top: 0.5%;
 }
 
 .bannerButton:hover {

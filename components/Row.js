@@ -18,9 +18,18 @@ function Row(props) {
 
   const { data = [], isLoading } = useSWR(props.fetchUrl);
 
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
+  // if (isLoading) {
+  //   return (
+  //     <div className={styles.row}>
+  //       <div className={styles.rowTitle}>
+  //         <h2 className={styles.title}>{props.title}</h2>
+  //       </div>
+  //       <div className={styles.seeMoreArrow}>
+  //         <div>Loading...</div>;
+  //       </div>
+  //     </div>
+  //   );
+  // }
   const movies = data.map((data, i) => {
     return <Movie key={i} {...data} />;
   });

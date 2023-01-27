@@ -21,14 +21,17 @@
   width: 100%;
   /* padding-left: 5%; */
   color: whitesmoke;
+  padding-top: 5%;
 }
 
 .emoji {
   display: flex;
   justify-content: space-around;
+  padding-top: 5%;
 }
 
 .titreModal {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 2%;
 }

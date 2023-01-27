@@ -80,9 +80,14 @@ function Banner(props) {
     }
   };
 
-  let styleIsGood = { cursor: "pointer", fontSize: "400%" };
+  let styleIsGood = { cursor: "pointer", fontSize: "200%", paddingTop: "5px" };
   if (good == true) {
-    styleIsGood = { cursor: "pointer", color: "green", fontSize: "400%" };
+    styleIsGood = {
+      cursor: "pointer",
+      color: "green",
+      fontSize: "200%",
+      paddingTop: "5px",
+    };
   }
   let iconGood = (
     <FontAwesomeIcon
@@ -114,9 +119,14 @@ function Banner(props) {
       setGood(false);
     }
   };
-  let styleIsBad = { cursor: "pointer", fontSize: "400%" };
+  let styleIsBad = { cursor: "pointer", fontSize: "200%", paddingTop: "5px" };
   if (bad == true) {
-    styleIsBad = { cursor: "pointer", color: "#e74c3c", fontSize: "400%" };
+    styleIsBad = {
+      cursor: "pointer",
+      color: "#e74c3c",
+      fontSize: "200%",
+      paddingTop: "5px",
+    };
   }
   let iconBad = (
     <FontAwesomeIcon
