@@ -30,7 +30,6 @@
     "react-reveal": "^1.2.2",
     "react-scripts-tailwind": "^2.2.0",
     "react-youtube": "^10.1.0",
-    "scroll-into-view-if-needed": "^3.0.4",
     "swr": "^2.0.0",
     "tailwind": "^4.0.0",
     "trailer": "^0.10.0",
