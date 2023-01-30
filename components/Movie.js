@@ -188,7 +188,7 @@ function Movie(props) {
         <div className={styles.titreModal}>
           <h3 className={styles.name}>
             {props.title ? props.title : props.name}
-            <span>({props.vote_average})</span>
+            <span> ({props.vote_average})</span>
           </h3>
           <p className={styles.mustSee}>{iconMustSee}</p>
         </div>

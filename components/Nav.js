@@ -19,7 +19,7 @@ function Nav() {
   };
 
   const toBrowse = () => {
-    router.push("/browse");
+    router.push("/");
   };
 
   let handleScroll = () => {

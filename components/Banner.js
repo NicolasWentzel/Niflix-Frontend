@@ -233,7 +233,7 @@ function Banner(props) {
               : "Titre inconnu"}
             <span>
               {movie && movie.vote_average
-                ? `(${movie.vote_average})`
+                ? ` (${movie.vote_average})`
                 : "(Inconnu)"}
             </span>
           </h3>

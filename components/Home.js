@@ -11,13 +11,13 @@ const Home = () => {
     }, 100);
   }, []);
 
-  useEffect(() => {
-    if (animationTriggered) {
-      setTimeout(() => {
-        window.location.href = "/browse";
-      }, 1500);
-    }
-  }, [animationTriggered]);
+  // useEffect(() => {
+  //   if (animationTriggered) {
+  //     setTimeout(() => {
+  //       window.location.href = "/browse";
+  //     }, 1500);
+  //   }
+  // }, [animationTriggered]);
 
   return (
     <div className={styles.main}>
