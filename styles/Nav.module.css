@@ -24,6 +24,7 @@
 .avatar {
   width: 32px;
   object-fit: contain;
+  /* border-radius: 50%; */
 }
 
 .liste {
