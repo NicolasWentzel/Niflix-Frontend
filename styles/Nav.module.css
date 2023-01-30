@@ -73,10 +73,10 @@
     width: 30px;
   }
   .block2 {
-    width: 50%;
+    /* width: 50%; */
   }
   .block3 {
-    padding-right: 3%;
+    /* padding-right: %; */
   }
   .liste {
     padding-top: 5%;

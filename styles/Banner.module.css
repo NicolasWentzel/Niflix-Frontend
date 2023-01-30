@@ -32,6 +32,9 @@
   .bannerDescription {
     padding-top: 2%;
   }
+  .bannerButton {
+    border-radius: 2vw;
+  }
 }
 
 .bannerButton {
@@ -89,9 +92,18 @@
 .emoji {
   display: flex;
   justify-content: space-around;
+  padding-top: 5%;
 }
 
 .titreModal {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 2%;
+}
+
+.description {
+  width: 100%;
+  /* padding-left: 5%; */
+  color: whitesmoke;
+  padding-top: 5%;
 }
