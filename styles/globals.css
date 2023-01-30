@@ -18,9 +18,9 @@ body {
   #widget4 {
     height: 300px;
   }
-  /* body {
+  body {
     overflow-y: scroll;
-  } */
+  }
 }
 
 .modalStyle .ant-modal-content {

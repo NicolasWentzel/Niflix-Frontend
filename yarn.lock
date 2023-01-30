@@ -14703,7 +14703,7 @@ scoped-regex@^2.0.0:
 
 scroll-into-view-if-needed@^3.0.3:
   version "3.0.3"
-  resolved "https://registry.yarnpkg.com/scroll-into-view-if-needed/-/scroll-into-view-if-needed-3.0.3.tgz#57256bef78f3c3c288070d2aaa63cf547aa11e70"
+  resolved "https://registry.yarnpkg.com/-into-view-if-needed/-/scroll-into-view-if-needed-3.0.3.tgz#57256bef78f3c3c288070d2aaa63cf547aa11e70"
   integrity sha512-QoCH0lVw0tbA7Rl6sToH7e1tO3n95Oi6JgBgC8hEpNNZUC91MfasJ/4E1ZdbzGueNDZ+Y7ObfRaelKUgTyPbJA==
   dependencies:
     compute-scroll-into-view "^2.0.2"
