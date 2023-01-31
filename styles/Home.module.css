@@ -14,10 +14,11 @@
   color: #e50914;
   font-family: "Netflix Sans", sans-serif;
   font-size: 200px;
-  font-weight: 900;
+  font-weight: 600;
   display: flex;
   justify-content: center;
   position: relative;
+  padding-bottom: 10%;
 }
 
 .title span {
@@ -28,23 +29,27 @@
 @media screen and (max-width: 600px) {
   .title {
     font-size: 95px;
+    font-weight: 600;
   }
 }
 
 @media screen and (min-width: 601px) and (max-width: 900px) {
   .title {
     font-size: 200px;
+    font-weight: 600;
   }
 }
 
 @media screen and (min-width: 901px) and (max-width: 1200px) {
   .title {
     font-size: 250px;
+    font-weight: 600;
   }
 }
 
 @media screen and (min-width: 1201px) {
   .title {
     font-size: 300px;
+    font-weight: 600;
   }
 }
